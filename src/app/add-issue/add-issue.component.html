@@ -1,0 +1,39 @@
+<div class="add-container">
+    <h2>Add new issues here</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+    <label for ="id">Id:</label>
+    <input type="text" id="id" formControlName="id"/>
+</div>
+
+<div class="form-group">
+    <label for ="status">Status:</label>
+    <select id="status" formControlName="gender">
+       <option value="" disabled>Select issue status</option>
+       <option value="open">open</option>
+       <option value="in progress">in progress</option>
+       <option value="closed">closed</option>
+    </select>
+   </div>
+
+<div class="form-group">
+ <label for ="title">Title:</label>
+    <input type="text" id="title" formControlName="title" placeholder="Enter issue title">
+</div>
+
+<div class="form-group">
+ <label for ="description">Description:</label>
+    <input type="text" id="description" formControlName="description" placeholder="Enter details">
+</div>
+
+<div class="form-group">
+    <label for ="creator">Creator:</label>
+    <input type="creator" id="creator" formControlName="creator" placeholder="Enter owner">
+</div>
+
+<div class="form-group">
+    <label for ="createdAt" id="createdAt" formControlName="createdAt" placeholder="Enter date">
+</div>
+
+<button type="submit" [disabled]="addForm.invalid">View Issues</button>
+</form>
